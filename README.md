@@ -8,7 +8,7 @@
 - Clone repository dallasrust/website-dioxus
 - cd website-dioxus/
 - cargo install dioxus-cli
-- dx build
+- dx build --release
 - cp -r dist/* ../dallasrust.github.io/
 - cd ../dallasrust.github.io/
 - git add .
