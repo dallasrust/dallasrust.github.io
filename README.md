@@ -11,8 +11,10 @@
 - dx build --release
 - cp -r dist/* ../dallasrust.github.io/
 - cd ../dallasrust.github.io/
-- git commit -am "website update"
+- git add .
+- git commit -m "website update"
 - git push
+- Wait a minute
 - Verify your update at https://dallasrust.github.io/
 
 ## History
