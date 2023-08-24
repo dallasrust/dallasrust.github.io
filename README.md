@@ -1,15 +1,14 @@
 # Dallas Rust Users Meetup GitHub Pages Website
 
-## Usage
+## Static Site Generation
 
 - mkdir dallasrust/
 - cd dallasrust/
 - Clone this repository dallasrust/dallasrust.github.io
 - Clone repository dallasrust/website-dioxus
 - cd website-dioxus/
-- cargo install dioxus-cli
-- dx build --release
-- cp -r dist/* ../dallasrust.github.io/
+- Follow the static site generation instructions in website_dioxus/README.md
+- cp -r static/* ../dallasrust.github.io/
 - cd ../dallasrust.github.io/
 - git add .
 - git commit -m "website update"
