@@ -23,11 +23,11 @@ body {
   padding: 1rem;
 }
 
-.box> :first-child {
+.box > :first-child {
   margin-top: 0;
 }
 
-.box> :last-child {
+.box > :last-child {
   margin-bottom: 0;
 }
 
@@ -79,7 +79,6 @@ ul li {
 }
 
 @media (min-width: calc(600px + 24rem)) {
-
   .frame {
     grid-template-columns: 24rem auto;
     max-width: calc(600px + 48rem);
@@ -102,7 +101,6 @@ ul li {
 }
 
 @media (min-width: calc(600px + 48rem)) {
-
   .frame {
     grid-template-columns: 24rem auto 24rem;
     max-width: calc(600px + 48rem);

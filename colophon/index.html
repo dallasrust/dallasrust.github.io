@@ -1,97 +1,114 @@
 <!doctype html>
-<html lang="en">
+<html>
   <head>
-    <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width,
-            initial-scale=1.0"
-    />
     <title>Dallas Rust User Meetup</title>
-    <link
-      rel="stylesheet"
-      href="/stylesheet.css"
-    />
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="/stylesheet.css" />
   </head>
   <body>
-    <div class="frame">
-      <div class="col-1">
-        <div class="box">
-          <span class="drum">Dallas Rust User Meetup</span>
-          <nav>
-            <ul>
-              <li>
-                <a
-                  href="/"
-                  dioxus-prevent-default="onclick"
-                  class=""
-                  id=""
-                  rel=""
-                  target=""
-                  >Home</a
-                >
-              </li>
-              <li>
-                <a
-                  href="/about"
-                  dioxus-prevent-default="onclick"
-                  class=""
-                  id=""
-                  rel=""
-                  target=""
-                  >About</a
-                >
-              </li>
-              <li>
-                <a
-                  href="/colophon"
-                  dioxus-prevent-default="onclick"
-                  class=""
-                  id=""
-                  rel=""
-                  target=""
-                  >Colophon</a
-                >
-              </li>
-            </ul>
-          </nav>
+    <div id="main">
+      <div class="frame">
+        <div class="col-1">
+          <div class="box">
+            <span class="drum">Dallas Rust User Meetup</span>
+            <nav>
+              <ul>
+                <li>
+                  <a
+                    href="/"
+                    dioxus-prevent-default="onclick"
+                    class=""
+                    id=""
+                    rel=""
+                    target=""
+                    >Home</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/about"
+                    dioxus-prevent-default="onclick"
+                    class=""
+                    id=""
+                    rel=""
+                    target=""
+                    >About</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/colophon"
+                    dioxus-prevent-default="onclick"
+                    class=""
+                    id=""
+                    rel=""
+                    target=""
+                    >Colophon</a
+                  >
+                </li>
+              </ul>
+            </nav>
+            <img
+              src="/rustacean-flat-gesture.svg"
+              style="cursor: pointer; transform: scaleX(1)"
+            />
+          </div>
         </div>
-      </div>
-      <div class="col-2">
-        <div class="box">
-          <h1>Colophon</h1>
-          <ul>
+        <div class="col-2">
+          <div class="box">
+            <h1>Colophon</h1>
+            <ul>
+              <p>
+                This website was created using the Rust library
+                <a href="https://dioxuslabs.com/" target="_blank">Dioxus</a>.
+              </p>
+              <p>
+                Images of Ferris the Crab and Corro the Unsafe Rusturchin are
+                from
+                <a href="https://www.rustacean.net/" target="_blank"
+                  >Rustacean.net</a
+                >.
+              </p>
+              <p>
+                The open source repository for this website is hosted on
+                GitHub:<br /><a
+                  href="https://github.com/dallasrust/website-dioxus"
+                  target="_blank"
+                  >https://github.com/dallasrust/website-dioxus</a
+                >
+              </p>
+            </ul>
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="box" style="text-align: center">
             <p>
-              This website was created using the Rust library
+              &copy; 2023
               <a
-                href="https://dioxuslabs.com/"
-                target="_blank"
-                >Dioxus</a
-              >.
-            </p>
-            <p>
-              The open source repository for this website is hosted on
-              GitHub:<br /><a
                 href="https://github.com/dallasrust/website-dioxus"
                 target="_blank"
-                >https://github.com/dallasrust/website-dioxus</a
+                >Dallas Rust User Meetup Contributors</a
               >
             </p>
-          </ul>
+            <img src="/corro.svg" width="100" />
+          </div>
         </div>
       </div>
-      <div class="col-3">
-        <div class="box">
-          <p>
-            &copy; 2023
-            <a
-              href="https://github.com/dallasrust/website-dioxus"
-              target="_blank"
-              >Dallas Rust User Meetup Contributors</a
-            >
-          </p>
-        </div>
-      </div>
+      <meta
+        hidden="true"
+        id="dioxus-storage-props"
+        data-serialized="AQ=="
+      /><meta hidden="true" id="dioxus-storage-data" data-serialized="AA==" />
     </div>
+    <script type="module">
+      import init from "/./assets/dioxus/dioxus_website.js";
+      init("/./assets/dioxus/dioxus_website_bg.wasm").then((wasm) => {
+        if (wasm.__wbindgen_start == undefined) {
+          wasm.main();
+        }
+      });
+    </script>
   </body>
 </html>

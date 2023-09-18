@@ -1,109 +1,116 @@
 <!doctype html>
-<html lang="en">
+<html>
   <head>
-    <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width,
-            initial-scale=1.0"
-    />
     <title>Dallas Rust User Meetup</title>
-    <link
-      rel="stylesheet"
-      href="/stylesheet.css"
-    />
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="/stylesheet.css" />
   </head>
   <body>
-    <div class="frame">
-      <div class="col-1">
-        <div class="box">
-          <span class="drum">Dallas Rust User Meetup</span>
-          <nav>
-            <ul>
-              <li>
-                <a
-                  href="/"
-                  dioxus-prevent-default="onclick"
-                  class=""
-                  id=""
-                  rel=""
-                  target=""
-                  >Home</a
-                >
-              </li>
-              <li>
-                <a
-                  href="/about"
-                  dioxus-prevent-default="onclick"
-                  class=""
-                  id=""
-                  rel=""
-                  target=""
-                  >About</a
-                >
-              </li>
-              <li>
-                <a
-                  href="/colophon"
-                  dioxus-prevent-default="onclick"
-                  class=""
-                  id=""
-                  rel=""
-                  target=""
-                  >Colophon</a
-                >
-              </li>
-            </ul>
-          </nav>
+    <div id="main">
+      <div class="frame">
+        <div class="col-1">
+          <div class="box">
+            <span class="drum">Dallas Rust User Meetup</span>
+            <nav>
+              <ul>
+                <li>
+                  <a
+                    href="/"
+                    dioxus-prevent-default="onclick"
+                    class=""
+                    id=""
+                    rel=""
+                    target=""
+                    >Home</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/about"
+                    dioxus-prevent-default="onclick"
+                    class=""
+                    id=""
+                    rel=""
+                    target=""
+                    >About</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/colophon"
+                    dioxus-prevent-default="onclick"
+                    class=""
+                    id=""
+                    rel=""
+                    target=""
+                    >Colophon</a
+                  >
+                </li>
+              </ul>
+            </nav>
+            <img
+              src="/rustacean-flat-gesture.svg"
+              style="cursor: pointer; transform: scaleX(1)"
+            />
+          </div>
+        </div>
+        <div class="col-2">
+          <div class="app-home box">
+            <h1>Dallas Rust User Meetup</h1>
+            <a href="https://www.meetup.com/dallasrust/" target="_blank"
+              >https://www.meetup.com/dallasrust/</a
+            ><br /><a href="https://www.meetup.com/dallasrust/" target="_blank"
+              ><img src="/rustacean-flat-happy.svg"
+            /></a>
+          </div>
+          <div class="box" style="margin-top: 2rem">
+            <span style="font-weight: bold">2023 Aug 17 Thu</span>
+            <p style="margin-top: 1rem">
+              The Dallas Rust User Meetup (DRUM) is seeking a location within
+              the Dallas area for our next face-to-face meeting. We are looking
+              for a site with a laptop projector. If you would like to host the
+              DRUM, please contact
+              <a
+                href="/about"
+                dioxus-prevent-default="onclick"
+                class=""
+                id=""
+                rel=""
+                target=""
+                >us</a
+              >.
+            </p>
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="box" style="text-align: center">
+            <p>
+              &copy; 2023
+              <a
+                href="https://github.com/dallasrust/website-dioxus"
+                target="_blank"
+                >Dallas Rust User Meetup Contributors</a
+              >
+            </p>
+            <img src="/corro.svg" width="100" />
+          </div>
         </div>
       </div>
-      <div class="col-2">
-        <div class="app-home box">
-          <h1>Dallas Rust User Meetup</h1>
-          <a
-            href="https://www.meetup.com/dallasrust/"
-            target="_blank"
-            >https://www.meetup.com/dallasrust/</a
-          ><br /><a
-            href="https://www.meetup.com/dallasrust/"
-            target="_blank"
-            ><img src="rustacean-flat-happy.svg"
-          /></a>
-        </div>
-        <div
-          class="box"
-          style="margin-top: 2rem"
-        >
-          <span style="font-weight: bold">2023 Aug 17 Thu</span>
-          <p style="margin-top: 1rem">
-            The Dallas Rust User Meetup (DRUM) is seeking a location within the
-            Dallas area for our next face-to-face meeting. We are looking for a
-            site with a laptop projector. If you would like to host the DRUM,
-            please contact
-            <a
-              href="/about"
-              dioxus-prevent-default="onclick"
-              class=""
-              id=""
-              rel=""
-              target=""
-              >us</a
-            >.
-          </p>
-        </div>
-      </div>
-      <div class="col-3">
-        <div class="box">
-          <p>
-            &copy; 2023
-            <a
-              href="https://github.com/dallasrust/website-dioxus"
-              target="_blank"
-              >Dallas Rust User Meetup Contributors</a
-            >
-          </p>
-        </div>
-      </div>
+      <meta
+        hidden="true"
+        id="dioxus-storage-props"
+        data-serialized="AQ=="
+      /><meta hidden="true" id="dioxus-storage-data" data-serialized="AA==" />
     </div>
+    <script type="module">
+      import init from "/./assets/dioxus/dioxus_website.js";
+      init("/./assets/dioxus/dioxus_website_bg.wasm").then((wasm) => {
+        if (wasm.__wbindgen_start == undefined) {
+          wasm.main();
+        }
+      });
+    </script>
   </body>
 </html>

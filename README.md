@@ -7,8 +7,9 @@
 - Clone this repository dallasrust/dallasrust.github.io
 - Clone repository dallasrust/website-dioxus
 - cd website-dioxus/
-- Follow the static site generation instructions in website_dioxus/README.md
-- cp -r static/* ../dallasrust.github.io/
+- Follow the installation instructions in website_dioxus/README.md
+- npm run dist
+- cp -r dist/* ../dallasrust.github.io/
 - cd ../dallasrust.github.io/
 - git add .
 - git commit -m "website update"

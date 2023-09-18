@@ -1,115 +1,119 @@
 <!doctype html>
-<html lang="en">
+<html>
   <head>
-    <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width,
-            initial-scale=1.0"
-    />
     <title>Dallas Rust User Meetup</title>
-    <link
-      rel="stylesheet"
-      href="/stylesheet.css"
-    />
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="/stylesheet.css" />
   </head>
   <body>
-    <div class="frame">
-      <div class="col-1">
-        <div class="box">
-          <span class="drum">Dallas Rust User Meetup</span>
-          <nav>
-            <ul>
-              <li>
-                <a
-                  href="/"
-                  dioxus-prevent-default="onclick"
-                  class=""
-                  id=""
-                  rel=""
-                  target=""
-                  >Home</a
-                >
-              </li>
-              <li>
-                <a
-                  href="/about"
-                  dioxus-prevent-default="onclick"
-                  class=""
-                  id=""
-                  rel=""
-                  target=""
-                  >About</a
-                >
-              </li>
-              <li>
-                <a
-                  href="/colophon"
-                  dioxus-prevent-default="onclick"
-                  class=""
-                  id=""
-                  rel=""
-                  target=""
-                  >Colophon</a
-                >
-              </li>
-            </ul>
-          </nav>
+    <div id="main">
+      <div class="frame">
+        <div class="col-1">
+          <div class="box">
+            <span class="drum">Dallas Rust User Meetup</span>
+            <nav>
+              <ul>
+                <li>
+                  <a
+                    href="/"
+                    dioxus-prevent-default="onclick"
+                    class=""
+                    id=""
+                    rel=""
+                    target=""
+                    >Home</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/about"
+                    dioxus-prevent-default="onclick"
+                    class=""
+                    id=""
+                    rel=""
+                    target=""
+                    >About</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/colophon"
+                    dioxus-prevent-default="onclick"
+                    class=""
+                    id=""
+                    rel=""
+                    target=""
+                    >Colophon</a
+                  >
+                </li>
+              </ul>
+            </nav>
+            <img
+              src="/rustacean-flat-gesture.svg"
+              style="cursor: pointer; transform: scaleX(1)"
+            />
+          </div>
+        </div>
+        <div class="col-2">
+          <div class="box">
+            <h1>About</h1>
+            <p>
+              The Dallas Rust User Meetup (DRUM) is a
+              <a href="https://www.rust-lang.org/" target="_blank"
+                >Rust programming language</a
+              >
+              User group.
+            </p>
+            <p>
+              Join our
+              <a href="https://www.meetup.com/dallasrust/" target="_blank"
+                >Meetup group</a
+              >
+              to access our bulletin boards and receive invitations to our
+              meetings. Anyone from anywhere is welcome to participate in our
+              semimonthly
+              <a href="https://discord.com/" target="_blank">Discord</a> server
+              meetings.
+            </p>
+            <h2>Contact</h2>
+            <p>
+              <a href="https://www.croftsoft.com/people/david/" target="_blank"
+                >David Wallace Croft</a
+              ><br />DRUM Organizer<br /><a href="mailto:david@croftsoft.com"
+                >david@CroftSoft.com</a
+              ><br />(214) 636-3790
+            </p>
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="box" style="text-align: center">
+            <p>
+              &copy; 2023
+              <a
+                href="https://github.com/dallasrust/website-dioxus"
+                target="_blank"
+                >Dallas Rust User Meetup Contributors</a
+              >
+            </p>
+            <img src="/corro.svg" width="100" />
+          </div>
         </div>
       </div>
-      <div class="col-2">
-        <div class="box">
-          <h1>About</h1>
-          <p>
-            The Dallas Rust User Meetup (DRUM) is a
-            <a
-              href="https://www.rust-lang.org/"
-              target="_blank"
-              >Rust programming language</a
-            >
-            User group.
-          </p>
-          <p>
-            Join our
-            <a
-              href="https://www.meetup.com/dallasrust/"
-              target="_blank"
-              >Meetup group</a
-            >
-            to access our bulletin boards and receive invitations to our
-            meetings. Anyone from anywhere is welcome to participate in our
-            semimonthly
-            <a
-              href="https://discord.com/"
-              target="_blank"
-              >Discord</a
-            >
-            server meetings.
-          </p>
-          <h2>Contact</h2>
-          <p>
-            <a
-              href="https://www.croftsoft.com/people/david/"
-              target="_blank"
-              >David Wallace Croft</a
-            ><br />DRUM Organizer<br /><a href="mailto:david@croftsoft.com"
-              >david@CroftSoft.com</a
-            ><br />(214) 636-3790
-          </p>
-        </div>
-      </div>
-      <div class="col-3">
-        <div class="box">
-          <p>
-            &copy; 2023
-            <a
-              href="https://github.com/dallasrust/website-dioxus"
-              target="_blank"
-              >Dallas Rust User Meetup Contributors</a
-            >
-          </p>
-        </div>
-      </div>
+      <meta
+        hidden="true"
+        id="dioxus-storage-props"
+        data-serialized="AQ=="
+      /><meta hidden="true" id="dioxus-storage-data" data-serialized="AA==" />
     </div>
+    <script type="module">
+      import init from "/./assets/dioxus/dioxus_website.js";
+      init("/./assets/dioxus/dioxus_website_bg.wasm").then((wasm) => {
+        if (wasm.__wbindgen_start == undefined) {
+          wasm.main();
+        }
+      });
+    </script>
   </body>
 </html>
