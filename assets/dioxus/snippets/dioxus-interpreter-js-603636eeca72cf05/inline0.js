@@ -164,9 +164,19 @@ const bool_attrs = {
 function truthy(val) {
   return val === "true" || val === true;
 }
-let s = "";
-let lsp, sp, sl;
-let c = new TextDecoder();
+const attr = [];
+let attr_tmp1, attr_tmp2;
+function get_attr() {
+  attr_tmp2 = u8buf[u8bufp++];
+  if (attr_tmp2 & 128) {
+    attr_tmp1 = s.substring(sp, (sp += u8buf[u8bufp++]));
+    attr[attr_tmp2 & 4294967167] = attr_tmp1;
+    return attr_tmp1;
+  } else {
+    return attr[attr_tmp2 & 4294967167];
+  }
+}
+let u32buf, u32bufp;
 const evt = [];
 let evt_tmp1, evt_tmp2;
 function get_evt() {
@@ -179,7 +189,6 @@ function get_evt() {
     return evt[evt_tmp2 & 4294967167];
   }
 }
-let u32buf, u32bufp;
 const ns_cache = [];
 let ns_cache_tmp1, ns_cache_tmp2;
 function get_ns_cache() {
@@ -193,19 +202,10 @@ function get_ns_cache() {
   }
 }
 let u8buf, u8bufp;
-const attr = [];
-let attr_tmp1, attr_tmp2;
-function get_attr() {
-  attr_tmp2 = u8buf[u8bufp++];
-  if (attr_tmp2 & 128) {
-    attr_tmp1 = s.substring(sp, (sp += u8buf[u8bufp++]));
-    attr[attr_tmp2 & 4294967167] = attr_tmp1;
-    return attr_tmp1;
-  } else {
-    return attr[attr_tmp2 & 4294967167];
-  }
-}
-let ptr, field, ns, value, len, bubbles, event_name, id;
+let s = "";
+let lsp, sp, sl;
+let c = new TextDecoder();
+let field, ns, event_name, id, bubbles, value, ptr, len;
 export function create(r) {
   d = r;
 }
@@ -218,6 +218,14 @@ export function run() {
     ls = m.getUint32(d + 12 * 4, true);
   }
   p = ls;
+  if ((metaflags >>> 3) & 1) {
+    u32buf = new Uint32Array(m.buffer, m.getUint32(d + 3 * 4, true));
+  }
+  u32bufp = 0;
+  if ((metaflags >>> 5) & 1) {
+    u8buf = new Uint8Array(m.buffer, m.getUint32(d + 5 * 4, true));
+  }
+  u8bufp = 0;
   if (metaflags & 1) {
     lsp = m.getUint32(d + 1 * 4, true);
   }
@@ -245,14 +253,6 @@ export function run() {
     }
   }
   sp = 0;
-  if ((metaflags >>> 3) & 1) {
-    u32buf = new Uint32Array(m.buffer, m.getUint32(d + 3 * 4, true));
-  }
-  u32bufp = 0;
-  if ((metaflags >>> 5) & 1) {
-    u8buf = new Uint8Array(m.buffer, m.getUint32(d + 5 * 4, true));
-  }
-  u8bufp = 0;
   for (;;) {
     op = m.getUint32(p, true);
     p += 4;
