@@ -5,93 +5,89 @@
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta charset="UTF-8" />
+    <link rel="stylesheet" href="/app-nav.css" />
     <link rel="stylesheet" href="/stylesheet.css" />
   </head>
   <body>
     <div id="main">
       <div class="frame">
         <div class="col-1">
-          <div class="box">
-            <span class="drum">Dallas Rust User Meetup</span>
-            <nav>
-              <ul>
-                <li>
-                  <a
-                    href="/"
-                    dioxus-prevent-default="onclick"
-                    class=""
-                    id=""
-                    rel=""
-                    target=""
-                    >Home</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="/about"
-                    dioxus-prevent-default="onclick"
-                    class=""
-                    id=""
-                    rel=""
-                    target=""
-                    >About</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="/colophon"
-                    dioxus-prevent-default="onclick"
-                    class=""
-                    id=""
-                    rel=""
-                    target=""
-                    >Colophon</a
-                  >
-                </li>
-              </ul>
-            </nav>
+          <nav class="app-nav box">
             <img
               src="/rustacean-flat-gesture.svg"
               style="cursor: pointer; transform: scaleX(1)"
             />
-          </div>
+            <ul>
+              <li>
+                <a
+                  href="/"
+                  dioxus-prevent-default="onclick"
+                  class=""
+                  id=""
+                  rel=""
+                  target=""
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/about"
+                  dioxus-prevent-default="onclick"
+                  class=""
+                  id=""
+                  rel=""
+                  target=""
+                  >About</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/colophon"
+                  dioxus-prevent-default="onclick"
+                  class="app-nav-active"
+                  id=""
+                  rel=""
+                  target=""
+                  >Colophon</a
+                >
+              </li>
+            </ul>
+          </nav>
         </div>
         <div class="col-2">
           <div class="app-colophon box">
             <h1>Colophon</h1>
+            <p>
+              This website was created using the Rust-based user interface
+              library
+              <a href="https://dioxuslabs.com/" target="_blank">Dioxus</a>.
+            </p>
+            <p>
+              The images of Ferris the Rustacean and Corro the Unsafe Rusturchin
+              are from
+              <a href="https://www.rustacean.net/" target="_blank"
+                >Rustacean.net</a
+              >.
+            </p>
+            <p>
+              The open source repositories for this website are hosted on
+              GitHub:
+            </p>
             <ul>
-              <p>
-                This website was created using the Rust-based user interface
-                library
-                <a href="https://dioxuslabs.com/" target="_blank">Dioxus</a>.
-              </p>
-              <p>
-                The images of Ferris the Rustacean and Corro the Unsafe
-                Rusturchin are from
-                <a href="https://www.rustacean.net/" target="_blank"
-                  >Rustacean.net</a
-                >.
-              </p>
-              <p>
-                The open source repositories for this website are hosted on
-                GitHub:
-              </p>
-              <ul>
-                <li>
-                  <a
-                    href="https://github.com/dallasrust/website-dioxus"
-                    target="_blank"
-                    >https://github.com/dallasrust/website-dioxus</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="https://github.com/dallasrust/dallasrust.github.io"
-                    target="_blank"
-                    >https://github.com/dallasrust/dallasrust.github.io</a
-                  >
-                </li>
-              </ul>
+              <li>
+                <a
+                  href="https://github.com/dallasrust/website-dioxus"
+                  target="_blank"
+                  >https://github.com/dallasrust/website-dioxus</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://github.com/dallasrust/dallasrust.github.io"
+                  target="_blank"
+                  >https://github.com/dallasrust/dallasrust.github.io</a
+                >
+              </li>
             </ul>
           </div>
         </div>
