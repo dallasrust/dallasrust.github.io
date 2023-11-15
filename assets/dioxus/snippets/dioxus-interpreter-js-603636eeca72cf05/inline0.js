@@ -164,6 +164,9 @@ const bool_attrs = {
 function truthy(val) {
   return val === "true" || val === true;
 }
+let s = "";
+let lsp, sp, sl;
+let c = new TextDecoder();
 const attr = [];
 let attr_tmp1, attr_tmp2;
 function get_attr() {
@@ -177,6 +180,7 @@ function get_attr() {
   }
 }
 let u32buf, u32bufp;
+let u8buf, u8bufp;
 const evt = [];
 let evt_tmp1, evt_tmp2;
 function get_evt() {
@@ -201,11 +205,7 @@ function get_ns_cache() {
     return ns_cache[ns_cache_tmp2 & 4294967167];
   }
 }
-let u8buf, u8bufp;
-let s = "";
-let lsp, sp, sl;
-let c = new TextDecoder();
-let field, ns, event_name, id, bubbles, value, ptr, len;
+let id, bubbles, ns, event_name, value, field, ptr, len;
 export function create(r) {
   d = r;
 }
@@ -218,14 +218,6 @@ export function run() {
     ls = m.getUint32(d + 12 * 4, true);
   }
   p = ls;
-  if ((metaflags >>> 3) & 1) {
-    u32buf = new Uint32Array(m.buffer, m.getUint32(d + 3 * 4, true));
-  }
-  u32bufp = 0;
-  if ((metaflags >>> 5) & 1) {
-    u8buf = new Uint8Array(m.buffer, m.getUint32(d + 5 * 4, true));
-  }
-  u8bufp = 0;
   if (metaflags & 1) {
     lsp = m.getUint32(d + 1 * 4, true);
   }
@@ -253,6 +245,14 @@ export function run() {
     }
   }
   sp = 0;
+  if ((metaflags >>> 3) & 1) {
+    u32buf = new Uint32Array(m.buffer, m.getUint32(d + 3 * 4, true));
+  }
+  u32bufp = 0;
+  if ((metaflags >>> 5) & 1) {
+    u8buf = new Uint8Array(m.buffer, m.getUint32(d + 5 * 4, true));
+  }
+  u8bufp = 0;
   for (;;) {
     op = m.getUint32(p, true);
     p += 4;
